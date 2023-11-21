@@ -22,9 +22,9 @@ void add(Node*& tree, int data) {
         tree=p;
     }
     else{
-        
-        if(data<tree->data) add(tree->pLeft,data);
-        if(data>tree->data) add(tree->pRight,data);
+        if (data == tree->data) continute;
+        else if(data<tree->data) add(tree->pLeft,data);
+        else if(data>tree->data) add(tree->pRight,data);
     }
 }
 
