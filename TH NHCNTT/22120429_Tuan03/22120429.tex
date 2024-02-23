@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}\hypersetup{linkbordercolor=blue}
+
+
+\title{Hello Latex!}
+\author{Hoang Quoc Viet}
+\date{\today}
+
+\graphicspath{{imgs/}}
+
+\begin{document}
+\maketitle
+
+\section{Getting Started}
+\textbf{Hello Latex!} Today I am learning \LaTeX. \LaTeX is a great program for writing math. I can test Vietnamese language ``Hoc vui thôi''.
+\\
+\indent I can write in line math such as $a^2 + b^2 = c^2$. I can also give equations their own space:
+\begin{equation}
+    \gamma^2 + \phi^2 = \omega^2
+\end{equation}
+
+``Maxwell’s equations'' are named for James Clark Maxwell and are as follow:
+
+\begin{equation} \label{eq:Gauss2}
+\vec{\nabla} \cdot \vec{E} =\frac{\rho}{\epsilon_{0}}  \qquad { Gauss's Law }
+\end{equation}
+\begin{equation} \label{eq:Gauss3}
+\vec{\nabla} \cdot \vec{B} = 0 \qquad { Gauss's Law for Magnetism }
+\end{equation}  
+
+
+Equations \ref{eq:Gauss2} and \ref{eq:Gauss3} are some of the most important in Physics.
+
+\section{What about Matrix Equations?}
+$$
+    \begin{pmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots & \ddots & \vdots\\
+        a_{n1} & a_{n2} & \cdots & a_{nn}
+    \end{pmatrix}
+    \begin{bmatrix}
+        v_1\\
+        v_2\\
+        \vdots\\
+        v_n
+    \end{bmatrix}
+    =
+    \begin{matrix}
+        w_1\\
+        w_2\\
+        \vdots\\
+        w_n
+    \end{matrix}
+$$
+
+\section{Tables and Figures}
+\text Creating table is not unlike creating matrix:
+\begin{table}
+    \caption{This is a table that shows how to create different lines as well as different justifications}
+    \label{tab:my_label}
+    \centering
+    \begin{tabular}{|l||c|c|r|} 
+    \hline
+     x & 1 & 2 & 3 \\
+    \hline\
+    f(x) & 4 & 8 & 12 \\
+    f(x) & 4 & 8 & 123 \\
+    \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=12cm]{imgs/img-1.jpg}
+    \caption{HCM University of science}
+    \label{fig:HCM University of science}
+\end{figure}
+
+\section{Bibliography}
+You will probably want references in your document so that you can cite articleslike ~\cite{frenkel_temperature_2012, frenkel_fine_2013, frenkel_optical_2013}
+
+\bibliographystyle{plain}
+\bibliography{bibl}
+ 
+\end{document}
